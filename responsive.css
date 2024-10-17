@@ -1,0 +1,151 @@
+
+@media (max-width: 535px) {
+    .pokeball {
+        margin: 8px;
+        background-size: 130px 130px;
+        width: 130px;
+        height: 130px;
+    }
+
+    .pokeball:hover {
+        width: 145px;
+        height: 145px;
+        background-size: 145px 145px;
+        margin: 3px;
+        filter: drop-shadow(0px 0px 15px yellow);
+    }
+
+    .imgPokemonList {
+        height: 40px;
+        padding-top: 10px;
+    }
+
+    .number {
+        padding-bottom: 4px;
+        padding-top: 9px;
+    }
+
+    .pokeName {
+        font-size: 16px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .imgCategory {
+        width: 22px;
+        padding-bottom: 3px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    #myChart {
+        height: 180px !important;
+        margin-top: -515px;
+    }
+
+    .closeBtn {
+        bottom: 130px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 330px) {
+
+    #myChart {
+        height: 150px !important;
+        margin-top: -515px;
+    }
+
+    .closeBtn {
+        bottom: 115px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .attackBox {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 315px) {
+
+    #myChart {
+        height: 150px !important;
+        margin-top: -515px;
+    }
+
+    .closeBtn {
+        bottom: 118px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .attackBox {
+        font-size: 12px;
+    }
+}
+
+@media (max-height: 450px) {
+    .pokedexContainer {
+        max-width: 850px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 0px;
+        position: relative;
+        animation: pokedexFall 1s ease-in-out forwards;
+    }
+
+    .detailBG {
+        rotate: 0;
+     }
+
+    .closeBtn {
+        bottom: 0px;
+    }
+
+    .pokedexUpperBox {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        position: relative;
+        top: -390px;
+        align-items: center;
+        height: 109px;
+        flex-direction: column;
+        left: -315px;
+        gap: 8px;
+    }
+
+    h1 {
+        margin-top: -600px;
+    }
+
+    .arrows {
+        margin-top: -75px;
+    }
+
+    #attacks {
+        width: 60%;
+        max-height: 258px;
+        margin-top: -784px;
+        right: 145px;
+    }
+
+    .flipContainer {
+        width: 50%;
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,228 @@
+
+.pokedexUpperBox {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    position: relative;
+    top: -540px;
+    align-items: flex-end;
+    height: 130px;
+}
+
+.pokemonImgClosedPokedex {
+    position: relative;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 40%;
+}
+
+.pokemonImgClosedPokedex:hover {
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+.pokemonStats {
+    opacity: 0;
+    animation: showPreview 0.5s ease 1.5s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+
+}
+
+#myChart {
+    margin-top: -540px;
+    filter: drop-shadow(0px 0px 2px white);
+    width: 100% !important;
+    height: 200px !important;
+    visibility: visible;
+}
+
+#attacks {
+    width: 100%;
+    max-height: 180px;
+    position: fixed;
+    margin-top: -750px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    justify-content: center;
+    visibility: hidden;
+    text-align: center;
+    display: flex;
+    scrollbar-color: #B31432 rgba(188, 231, 245, 0.2);
+}
+
+.stats {
+    visibility: visible;
+}
+
+@keyframes showPreview {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hidePreview {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.textVertical {
+    writing-mode: vertical-rl;
+}
+
+.typeWritten {
+    padding: 2px 5px;
+    border-radius: 10px;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+#typeLabel {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#typeInBox {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#typeIcons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#pokedexSwitch {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.previousNext {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 90%;
+    margin-bottom: 500px;
+    z-index: 98;
+}
+
+.arrows {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.arrows:hover {
+    cursor: pointer;
+    filter: sepia();
+}
+
+.reverse {
+    transform: scaleX(-1);
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.closeBtn {
+    position: fixed;
+    bottom: 150px;
+    z-index: 99;
+}
+
+.kartFlipIcon {
+    width: 50px;
+    padding: 15px 0px 15px 5px;
+
+    background-image: url(./img/pokecardBG.jpg);
+    background-size: 300%;
+    background-position-x: center;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.flipContainer {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 60px;
+    height: 80px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-box-back {
+    background-image: url(./img/pokecardBG.jpg);
+    background-position-x: center;
+    background-size: 300%;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.attackBox {
+    padding: 3px 5px;
+    border-radius: 5px;
+    margin: 3px;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+}
+
+#erase {
+    width: 24px;
+    cursor: pointer;
+}
+
+.marginTop {
+    top: 180px;
+}

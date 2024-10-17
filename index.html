@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="script.js"></script>
+    <script src="chart.js"></script>
+    <script src="templates.js"></script>
+    <script src="translation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="fonts.css">
+</head>
+
+<body id="body" onload="init()">
+    <img class="titleIMG" src="./img/title5.png" id="top">
+    <div class="icons" id="flags">
+        <img onclick="changeLanguage('eng'), playSound(7)" src="./img/english.jpg" id="flagEng" onmouseover="playSound(3)">
+        <img onclick="changeLanguage('ger'), playSound(8)" src="./img/german.png" id="flagGer" onmouseover="playSound(3)">
+        <img onclick="changeLanguage('fra'), playSound(9)" src="./img/french.png" id="flagFra" onmouseover="playSound(3)">
+    </div>
+    <div class="flexCenter">
+        <img class="search" src="./img/search.png">
+        <input class="searchField" id="searchBar" placeholder="Pokemon suchen..." onkeyup="searchBar()">
+        <img src="./img/erase.png" id="erase" onclick="eraseSearchBar()">
+    </div>
+    <div class="album" id="album"></div>
+    <a href="#top">
+        <div class="backUp"  onmouseover="playSound(4)"  onclick="playSound(6)">&#8593;</div>
+    </a>
+    <div class="popUp" id="popUp" style="display: none;">
+        <div class="pokedexContainer" id="pokedexContainer">
+            <img class="pokedexDetail pokedexUpperCase" src="./img/pokedex.png" onclick="closePokedex()">
+            <div class="pokedexDetail"><img class="detailBG" id="pokeDetail" src="./img/pokeDetailsBG.png"></div>
+            <div class="pokemonStats" id="pokemonStats">
+                <div class="pokedexUpperBox" id="pokedexUpperBox">
+                    <div id="typeInBox">
+                        <div id="typeIcons"></div>
+                        <div id="typeLabel"></div>
+                    </div>
+                    <div id="bodyInfo"></div>
+                    <img class="pokemonImgClosedPokedex" id="pokedexClosedPreview" onclick="pokemonShout()">
+                    <div class="flipContainer">
+                        <div class="flip-box" onclick="flipCard()">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front">
+                                    <img src="./img/flip.png" class="kartFlipIcon" onmouseover="playSound(5)">
+                                </div>
+                                <div class="flip-box-back">
+                                    <p id="flipCardText" class="textVertical"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="width100 stats" id="stats">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="width100" id="attacks">
+                </div>
+                <div class="previousNext">
+                    <img src="./img/arrow.png" class="arrows" onclick="changePokemon('previous')" id="btn_next"
+                        onmouseover="playSound(3)">
+                    <h1 id="bigPokeName"></h1>
+                    <img src="./img/arrow.png" class="arrows reverse" onclick="changePokemon('next')" id="btn_previos"
+                        onmouseover="playSound(3)">
+                </div>
+            </div>
+            <img class="pokedexDetail flipVertical" src="./img/pokedex.png" onclick="closePokedex()">
+            <img src="./img/closePD.png" class="arrows closeBtn" onclick="closePokedex()" onmouseover="playSound(3)">
+
+        </div>
+    </div>
+    <div class="popUp marginTop" id="foundPokemon" style="display: none;">
+        <div class="listFoundPokemon" id="listFoundPokemon"></div>
+    </div>
+    <div class="loadScreen" id="loadScreen" style="display: flex;">
+        <img class="titleIMG" src="./img/title5.png">
+        <img class="circle" id="loadingCircle" src="./img/loading.png">
+        <p class="loading" id="loadingText">Loading</p>
+        <img class="startButton d-none" id="start" onclick="getStarted()" src="./img/start.png">
+    </div>
+    <footer>
+        <button onclick="playSound(5), showMorePokemon()" id="btnMorePokemon"   onmouseover="playSound(4)">Weitere Pokemon laden</button>
+    </footer>
+</body>
+
+</html>
