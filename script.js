@@ -14,7 +14,7 @@ let foundPokemon = [];
 
 async function init() {
     document.getElementById('body').classList.add('noScrolling');
-    for (let i = 1; i < 20; i++) {
+    for (let i = 1; i < max; i++) {
         await getAPIdata(i);
         language[0].eng.push(changeToUpperCase(chosenPokemonAsJson.name));
     }
@@ -22,7 +22,7 @@ async function init() {
     document.getElementById('loadingText').classList.add('d-none');
     document.getElementById('start').classList.remove('d-none');
     loadPokemon();
-    for (let i = 1; i < 151; i++) {await getAPIdata(i)}
+    // for (let i = 1; i < 151; i++) {await getAPIdata(i)}
 }
 
 // Starts the Pokedex and closes the loading screen
